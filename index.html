@@ -30,6 +30,15 @@
             background-color: #58a6ff; /* Accent color */
             border-radius: 9999px;
         }
+        /* Custom hover effect for content blocks */
+        .content-block-hover {
+            transition: all 0.3s ease-in-out;
+            border: 1px solid transparent;
+        }
+        .content-block-hover:hover {
+            border-color: #58a6ff; /* Light blue border on hover */
+            box-shadow: 0 10px 15px -3px rgba(88, 166, 255, 0.1), 0 4px 6px -2px rgba(88, 166, 255, 0.05); /* Subtle blue glow */
+        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -45,6 +54,7 @@
                 <!-- Desktop Nav Links -->
                 <nav class="hidden md:flex space-x-8 items-center">
                     <a href="#about" class="text-gray-300 hover:text-[#58a6ff] transition duration-200">About</a>
+                    <a href="#education" class="text-gray-300 hover:text-[#58a6ff] transition duration-200">Education</a>
                     <a href="#experience" class="text-gray-300 hover:text-[#58a6ff] transition duration-200">Experience</a>
                     <a href="#projects" class="text-gray-300 hover:text-[#58a6ff] transition duration-200">Projects</a>
                     <a href="#contact" class="text-gray-300 hover:text-[#58a6ff] transition duration-200">Contact</a>
@@ -65,6 +75,7 @@
         <div id="mobile-menu" class="md:hidden hidden bg-black/90">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
                 <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 w-full text-center">About</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 w-full text-center">Education</a>
                 <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 w-full text-center">Experience</a>
                 <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 w-full text-center">Projects</a>
                 <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 w-full text-center">Contact</a>
@@ -80,13 +91,13 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
         <!-- Hero/Introduction Section -->
-        <section id="hero" class="text-center py-20 mb-16 bg-gray-900/50 rounded-2xl shadow-2xl">
+        <section id="hero" class="text-center py-20 mb-16 bg-gray-900/50 rounded-2xl shadow-2xl content-block-hover">
             <h1 class="text-5xl sm:text-6xl font-extrabold text-white mb-4 leading-tight">
                 Hello, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">Shivayogi Angadi</span>.
             </h1>
             <!-- UPDATED TAGLINE HERE: Now more active and impactful -->
             <p class="text-xl sm:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto">
-                I architect and deploy **intelligent, scalable systems** by fusing **Deep Learning** with **Full-Stack Engineering**.
+                I architect and deploy intelligent, scalable systems by fusing Deep Learning with Full-Stack Engineering.
             </p>
             <!-- Call to action button linking to projects -->
             <a href="#experience" class="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-xl text-white bg-blue-600 hover:bg-blue-700 transition duration-300 shadow-lg transform hover:scale-[1.02] active:scale-100">
@@ -97,10 +108,10 @@
         <!-- About Me Section -->
         <section id="about" class="py-16">
             <h2 class="section-title text-4xl font-bold mb-8 text-white">About Me</h2>
-            <div class="bg-gray-800/50 p-8 rounded-xl shadow-xl">
+            <div class="bg-gray-800/50 p-8 rounded-xl shadow-xl content-block-hover">
                 <!-- NEW PROFESSIONAL SUMMARY -->
                 <p class="text-lg leading-relaxed text-gray-300 mb-6">
-                    Aspiring **AI Engineer** and Engineering Graduate with a strong foundation in **software development**, **data analysis**, and **machine learning**. Skilled in **Python**, **Django**, **SQL**, and **PyTorch**, with hands-on experience in **neural networks**, **deep learning**, and **data visualization**. Experienced in building AI-driven solutions for **computer vision** and **data automation** projects. Passionate about leveraging **AI** and **data science** to develop scalable, intelligent systems that solve real-world problems.
+                    Aspiring AI Engineer and Engineering Graduate with a strong foundation in software development, data analysis, and machine learning. Skilled in Python, Django, SQL, and PyTorch, with hands-on experience in neural networks, deep learning, and data visualization. Experienced in building AI-driven solutions for computer vision and data automation projects. Passionate about leveraging AI and data science to develop scalable, intelligent systems that solve real-world problems.
                 </p>
                 <div class="mt-8">
                     <h3 class="text-2xl font-semibold text-blue-400 mb-4">Core Skills:</h3>
@@ -117,35 +128,54 @@
         </section>
 
         ---
+
+        <!-- Educational Background Section (NEW) -->
+        <section id="education" class="py-16">
+            <h2 class="section-title text-4xl font-bold mb-12 text-white">Educational Background</h2>
+            <div class="bg-gray-800/50 p-6 rounded-xl shadow-xl border-l-4 border-yellow-500 content-block-hover">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3">
+                    <h3 class="text-2xl font-bold text-yellow-400">Bachelor of Engineering (B.E) in Information Science and Engineering</h3>
+                    <span class="text-sm font-medium text-gray-400 mt-1 sm:mt-0">2021 – 2025</span>
+                </div>
+                <div class="text-lg text-gray-300 mb-2">
+                    Acharya Institute of Technology (affiliated to VTU), Bangalore.
+                </div>
+                <p class="text-md text-gray-400">
+                    CGPA: 8.7/10
+                </p>
+            </div>
+        </section>
+
+        ---
         
-        <!-- Professional Experience Section (NEW) -->
+        <!-- Professional Experience Section -->
         <section id="experience" class="py-16">
             <h2 class="section-title text-4xl font-bold mb-12 text-white">Professional Experience</h2>
             <div class="space-y-10">
 
                 <!-- Experience Item 1: SDE Intern -->
-                <div class="bg-gray-800/50 p-6 rounded-xl shadow-xl border-l-4 border-blue-500 hover:bg-gray-800 transition duration-300">
+                <div class="bg-gray-800/50 p-6 rounded-xl shadow-xl border-l-4 border-blue-500 hover:bg-gray-800 transition duration-300 content-block-hover">
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3">
                         <h3 class="text-2xl font-bold text-blue-400">SDE Intern - Blue Stock</h3>
                         <span class="text-sm font-medium text-gray-400 mt-1 sm:mt-0">10/2025 – Present (Remote)</span>
                     </div>
                     <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                        <li class="pl-2">Monitored **server performance** and provided comprehensive **technical support**, ensuring high system availability and reliability for development operations.</li>
-                        <li class="pl-2">Assisted with **data transfer and verification** post-exam, streamlining the process to ensure a smooth and accurate transition of critical examination data.</li>
+                        <li class="pl-2">Monitored server performance and provided comprehensive technical support, ensuring high system availability and reliability for development operations.</li>
+                        <li class="pl-2">Assisted with data transfer and verification post-exam, streamlining the process to ensure a smooth and accurate transition of critical examination data.</li>
                         <li class="pl-2">Utilized version control systems and agile methodologies to contribute effectively to the development team.</li>
                     </ul>
                 </div>
 
                 <!-- Experience Item 2: Research Intern -->
-                <div class="bg-gray-800/50 p-6 rounded-xl shadow-xl border-l-4 border-purple-500 hover:bg-gray-800 transition duration-300">
+                <div class="bg-gray-800/50 p-6 rounded-xl shadow-xl border-l-4 border-purple-500 hover:bg-gray-800 transition duration-300 content-block-hover">
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3">
                         <h3 class="text-2xl font-bold text-purple-400">Research Intern - RE Journal</h3>
                         <span class="text-sm font-medium text-gray-400 mt-1 sm:mt-0">04/2025 – 06/2025 (Remote)</span>
                     </div>
                     <ul class="list-disc list-inside space-y-2 text-gray-300 ml-4">
-                        <li class="pl-2">Managed and structured **large real estate databases** for enhanced research efficiency, focusing on property valuation and market analysis in Indian metros.</li>
-                        <li class="pl-2">Developed and implemented **forecasting methods** to support data-driven decision-making processes for market projections.</li>
-                        <li class="pl-2">Tracked and analyzed data related to major infrastructure projects in **Bengaluru**, providing timely insights for market reports.</li>
+                        <li class="pl-2">Managed and structured large real estate databases for enhanced research efficiency, focusing on property valuation and market analysis in Indian metros.</li>
+                        <li class="pl-2">Developed and implemented forecasting methods to support data-driven decision-making processes for market projections.</li>
+                        <li class="pl-2">Tracked and analyzed data related to major infrastructure projects in Bengaluru, providing timely insights for market reports.</li>
                     </ul>
                 </div>
 
@@ -161,11 +191,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
 
                 <!-- Project Card 1: Customer Analytics Dashboard (Tableau) -->
-                <div class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden hover:shadow-yellow-500/50 transition duration-300 transform hover:-translate-y-1 flex flex-col">
+                <div class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden hover:shadow-yellow-500/50 transition duration-300 transform hover:-translate-y-1 flex flex-col content-block-hover">
                     <img src="https://placehold.co/600x400/2f363d/a0a0a0?text=Tableau+Dashboard" alt="Customer Analytics Dashboard Project" class="w-full h-48 object-cover">
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="text-2xl font-semibold text-yellow-400 mb-2">Customer Analytics Dashboard</h3>
-                        <p class="text-gray-400 mb-4 text-sm flex-grow">Developed an interactive dashboard using **Tableau** to analyze sales trends, customer behavior, and key business metrics. **Features:** Visualized monthly revenue and best-selling products with real-time filtering options.</p>
+                        <p class="text-gray-400 mb-4 text-sm flex-grow">Developed an interactive dashboard using Tableau to analyze sales trends, customer behavior, and key business metrics. Features: Visualized monthly revenue and best-selling products with real-time filtering options.</p>
                         
                         <!-- NEW TECH STACK BADGES -->
                         <div class="flex flex-wrap gap-2 mb-4 pt-4 border-t border-gray-700/50">
@@ -181,11 +211,11 @@
                 </div>
 
                 <!-- Project Card 2: Crop Recommendation System (ML) -->
-                <div class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden hover:shadow-green-500/50 transition duration-300 transform hover:-translate-y-1 flex flex-col">
+                <div class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden hover:shadow-green-500/50 transition duration-300 transform hover:-translate-y-1 flex flex-col content-block-hover">
                     <img src="https://placehold.co/600x400/2f363d/a0a0a0?text=ML+System+Image" alt="Crop Recommendation Project" class="w-full h-48 object-cover">
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="text-2xl font-semibold text-green-400 mb-2">Crop Recommendation System (ML)</h3>
-                        <p class="text-gray-400 mb-4 text-sm flex-grow">Machine learning model recommending optimal crops based on soil and climate, utilizing SVM, KNN, and Logistic Regression with **97.5%+ accuracy**. Processed data on NPK, temperature, humidity, pH, and rainfall.</p>
+                        <p class="text-gray-400 mb-4 text-sm flex-grow">Machine learning model recommending optimal crops based on soil and climate, utilizing SVM, KNN, and Logistic Regression with 97.5%+ accuracy. Processed data on NPK, temperature, humidity, pH, and rainfall.</p>
                         
                         <!-- NEW TECH STACK BADGES -->
                         <div class="flex flex-wrap gap-2 mb-4 pt-4 border-t border-gray-700/50">
@@ -203,11 +233,11 @@
                 </div>
                 
                 <!-- Project Card 3: Auto-Spare Parts Management System -->
-                <div class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden hover:shadow-blue-500/50 transition duration-300 transform hover:-translate-y-1 flex flex-col">
+                <div class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden hover:shadow-blue-500/50 transition duration-300 transform hover:-translate-y-1 flex flex-col content-block-hover">
                     <img src="https://placehold.co/600x400/2f363d/a0a0a0?text=Inventory+App" alt="Database Management Project" class="w-full h-48 object-cover">
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="text-2xl font-semibold text-blue-400 mb-2">Auto-Spare Parts Management System</h3>
-                        <p class="text-gray-400 mb-4 text-sm flex-grow">Developed a full-stack platform to automate record-keeping for sales and purchases, managing customer, product, and order data. **Impact:** Significantly reduced manual inventory work and provided functionality for automated record-keeping.</p>
+                        <p class="text-gray-400 mb-4 text-sm flex-grow">Developed a full-stack platform to automate record-keeping for sales and purchases, managing customer, product, and order data. Impact: Significantly reduced manual inventory work and provided functionality for automated record-keeping.</p>
                         
                         <!-- NEW TECH STACK BADGES -->
                         <div class="flex flex-wrap gap-2 mb-4 pt-4 border-t border-gray-700/50">
@@ -225,11 +255,11 @@
                 </div>
 
                 <!-- Project Card 4: Face Detection & Identification (CNN) -->
-                <div class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden hover:shadow-purple-500/50 transition duration-300 transform hover:-translate-y-1 flex flex-col">
+                <div class="bg-gray-800 rounded-xl shadow-2xl overflow-hidden hover:shadow-purple-500/50 transition duration-300 transform hover:-translate-y-1 flex flex-col content-block-hover">
                     <img src="https://placehold.co/600x400/2f363d/a0a0a0?text=AI+Recognition" alt="Face Detection Project" class="w-full h-48 object-cover">
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="text-2xl font-semibold text-purple-400 mb-2">Face Detection & Identification (CNN)</h3>
-                        <p class="text-gray-400 mb-4 text-sm flex-grow">Developed a real-time face recognition model using a Convolutional Neural Network (CNN). Achieved **96% accuracy** on a custom dataset for efficient recognition.</p>
+                        <p class="text-gray-400 mb-4 text-sm flex-grow">Developed a real-time face recognition model using a Convolutional Neural Network (CNN). Achieved 96% accuracy on a custom dataset for efficient recognition.</p>
                         
                         <!-- NEW TECH STACK BADGES -->
                         <div class="flex flex-wrap gap-2 mb-4 pt-4 border-t border-gray-700/50">
@@ -254,7 +284,7 @@
         <!-- Contact Section -->
         <section id="contact" class="py-16">
             <h2 class="section-title text-4xl font-bold mb-12 text-white">Get In Touch</h2>
-            <div class="bg-gray-800/50 p-8 rounded-xl shadow-xl max-w-2xl mx-auto">
+            <div class="bg-gray-800/50 p-8 rounded-xl shadow-xl max-w-2xl mx-auto content-block-hover">
                 <p class="text-lg text-gray-300 mb-8 text-center">
                     I'm currently available for new opportunities. Feel free to connect!
                 </p>
